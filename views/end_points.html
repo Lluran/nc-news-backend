@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <script src="/css/main.css"></script>
+</head>
+
+<body>
+  <div style="margin: auto; text-align: center">
+    <h2>API</h2>
+    <p>localhost:9090/api</p>
+    <p class="method">GET</p>
+    <p>Success Response - Status: 200. Content: html page with list of all API endpoints (this page)</p>
+  </div>
+  <div style="margin: auto; text-align: center">
+    <h2>Topics</h2>
+    <p>localhost:9090/api/topics</p>
+    <p class="method">GET</p>
+    <p>Success Response - Status: 200. Content: Array containing all topic info Objects</p>
+  </div>
+  <div style="margin: auto; text-align: center">
+    <h2>Topics/Articles</h2>
+    <p>localhost:9090/api/topics/:topic_slug/articles</p>
+    <p class="method">GET</p>
+    <p>Success Response - Status: 200. Content: Array containing all article objects belonging to a given topic
+      parameter</p>
+    <p class="method">POST</p>
+    <p>Success Response - Status: 201. Content: An object containing the properties of the posted article</p>
+  </div>
+  <div style="margin: auto; text-align: center">
+    <h2>Articles</h2>
+    <p>localhost:9090/api/articles</p>
+    <p class="method">GET</p>
+    <p>Success Response - Status: 200. Content: Array containing all article-info-objects</p>
+  </div>
+  <div style="margin: auto; text-align: center">
+    <h2>Articles/ID</h2>
+    <p>localhost:9090/api/articles/:article_id</p>
+    <p class="method">GET</p>
+    <p>Success Response - Status: 200. Content: Object containing info on requested article</p>
+    <p class="method">PATCH (using query vote=up||down)</p>
+    <p>Success Response - Status: 200. Content: Object containing info on requested article with new vote count</p>
+  </div>
+  <div style="margin: auto; text-align: center">
+    <h2>Articles/ID/Comments</h2>
+    <p>localhost:9090/api/articles/:article_id/comments</p>
+    <p class="method">GET</p>
+    <p>Success Response - Status: 200. Content: Array containing comment-objects for given article</p>
+    <p class="method">POST</p>
+    <p>Success Response - Status: 201. Content: Object containing posted comment info</p>
+  </div>
+  <div style="margin: auto; text-align: center">
+    <h2>Comments/ID</h2>
+    <p>localhost:9090/api/comments/:comment_id</p>
+    <p class="method">PATCH (using query vote=up||down)</p>
+    <p>Success Response - Status: 200. Content: Object containing info on requested comment with new vote count</p>
+    <p class="method">DELETE</p>
+    <p>Success Response - Status: 202. Content: Object containing info on deleted comment</p>
+  </div>
+  <div style="margin: auto; text-align: center">
+    <h2>Users/Username</h2>
+    <p>localhost:9090/api/users/:username</p>
+    <p class="method">GET</p>
+    <p>Success Response - Status: 200. Content: Object containing info about given user</p>
+  </div>
+</body>
+
+</html>
